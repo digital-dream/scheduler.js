@@ -1,4 +1,4 @@
-var $scheduler = {
+var scheduler = {
     'step': function(desc, scroll, fn, sleep){
         $('html, body').animate({scrollTop:scroll}, 'slow');
         console.profile(desc);
