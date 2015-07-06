@@ -1,5 +1,4 @@
 var scheduler = {
-    'showScroll': false,
     'step': function(desc, scroll, fn, sleep){
         $('html, body').animate({scrollTop:scroll}, 'slow');
         console.profile(desc);
@@ -15,14 +14,9 @@ var scheduler = {
     },
     'getScope': function(attr, name){
         return angular.element(document.querySelectorAll('[' + attr + '="' + name + '"]')).scope();
-    },
-    'setScrollMonitor': function(value){
-        scheduler.showScroll = value;
     }
 };
 
 $(window).scroll(function() {
-    if(scheduler.showScroll){
-        console.info($(this).scrollTop());
-    }
+    console.info($(this).scrollTop());
 });
