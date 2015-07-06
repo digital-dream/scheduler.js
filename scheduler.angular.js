@@ -14,10 +14,5 @@ var scheduler = {
     },
     'getScope': function(attr, name){
         return angular.element(document.querySelectorAll('[' + attr + '="' + name + '"]')).scope();
-    },
-    'scrollMonitor': function(){
-        $('html, body').scroll(function() {
-            console.info($('html, body').scrollTop());
-        });
     }
 };
