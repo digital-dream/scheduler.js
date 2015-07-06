@@ -14,9 +14,10 @@ var scheduler = {
     },
     'getScope': function(attr, name){
         return angular.element(document.querySelectorAll('[' + attr + '="' + name + '"]')).scope();
+    },
+    'scrollMonitor': function(){
+        $(window).scroll(function() {
+            console.info($(this).scrollTop());
+        });
     }
 };
-
-$(window).scroll(function() {
-    console.info($(this).scrollTop());
-});
