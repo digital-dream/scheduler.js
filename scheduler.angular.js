@@ -16,8 +16,8 @@ var scheduler = {
         return angular.element(document.querySelectorAll('[' + attr + '="' + name + '"]')).scope();
     },
     'scrollMonitor': function(){
-        $('html').scroll(function() {
-            console.info($(this).scrollTop());
+        $('html, body').scroll(function() {
+            console.info($('html, body').scrollTop());
         });
     }
 };
